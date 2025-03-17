@@ -7,9 +7,12 @@ int binarySearch(int arr[], int n, int target) {
    while (lower <= high) {
       int mid = (lower + high) / 2;
 
-      if (arr[mid] == target) return mid;  
-      else if (arr[mid] < target) lower = mid + 1;  
-      else high = mid - 1;  
+      if (arr[mid] == target) 
+         return mid;  
+      else if (arr[mid] < target) 
+         lower = mid + 1;  
+      else 
+         high = mid - 1;  
    }
    return -1; 
 }
@@ -27,9 +30,10 @@ int main() {
 
    int index = binarySearch(arr, n, target);
 
-   if (index != -1) printf("\nElement found at index: %d\n", index);
+   if (index != -1) 
+      printf("\nElement found at index: %d\n", index);
    else printf("Element not found.\n");
-   printf("Target value: %d\n", target);
+      printf("Target value: %d\n", target);
 
    return 0;
 }
